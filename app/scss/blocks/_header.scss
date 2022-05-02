@@ -1,0 +1,32 @@
+.header {
+ position: fixed;
+ left: 0;
+ top: 30px;
+ right: 0;
+ z-index: 999;
+  &__inner {
+   @include text(15px, 1.1);
+   @extend %ubuntu-medium;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   min-height: 30px;
+  }
+  &__btn {
+   color: $primaryColor;
+   border: 1px solid $primaryColor;
+   border-radius: 3px;
+   margin-right: 8px;
+   padding: 6px 28px;
+   cursor: pointer;
+   transition: all 0.5s;
+    &:hover {
+     color: #000;
+     background-color: $primaryColor;
+    }
+  }
+  &__phone {
+   @include text(16px, 1.1);
+   @extend %ubuntu-bold;
+  }
+}
