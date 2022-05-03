@@ -1,0 +1,99 @@
+.contacts {
+ &__inner {
+  display: flex;
+  padding-left: 55px;
+ }
+ &__info {
+  max-width: 240px;
+  width: 100%;
+  margin-right: 60px;
+ }
+ &__info-box {
+  &:not(:last-child) {
+   margin-bottom: 30px;
+  }
+ }
+ &__info-name,
+ &__form-title {
+  @include text(21px, 1.1);
+  @extend %ubuntu-bold;
+  margin: 0 0 13px;
+ }
+ &__info-phone,
+ &__info-email {
+  @include text(15px, 1.3);
+  @extend %ubuntu-light;
+  margin-bottom: 5px;
+  transition: all 0.5s;
+   &:hover {
+    text-decoration: underline;
+   }
+ }
+ &__form {
+  max-width: 570px;
+  width: 100%;
+  margin-right: 105px;
+ }
+ &__form-text {
+  @include text(15px, 1.5);
+  @extend %ubuntu-light;
+  margin-bottom: 12px;
+ }
+ &__form-fields {
+  display: flex; 
+  justify-content: space-between;
+  margin-bottom: 10px;
+ }
+ &__form-field {
+  max-width: 280px;
+  width: 100%;
+ }
+ &__form-entry {
+  width: 100%;
+  height: 144px;
+  resize: none;
+  margin-bottom: 20px;
+ }
+ &__form-field, 
+ &__form-entry {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: $primaryColor;
+  padding: 15px;
+  border: none;
+  &::placeholder {
+   @include text(13px, 1.3);
+  }
+ }
+ &__form-btn {
+  @include text(14px, 1.1);
+  @extend %ubuntu-bold;
+  color: $primaryColor;
+  border: 1px solid $primaryColor;
+  padding: 9px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.5s;
+   &:hover {
+    color: #000;
+    background-color: $primaryColor;
+   }  
+ }
+ &__social-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+ &__social-item {
+  &:not(:last-child) {
+   margin-bottom: 28px;
+  }
+ }
+&__social-logo {
+ opacity: 0.5;
+ transition: all 0.5s;
+  &:hover {
+   opacity: 1;
+  }
+}
+}

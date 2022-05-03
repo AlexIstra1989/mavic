@@ -1,0 +1,91 @@
+.benefits {
+ &__items {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 25px;
+ }
+ &__item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px;
+  width: 567px;
+   &:nth-child(even) {
+    margin-left: 40px;
+    margin-top: 15px;
+    transform: translateY(25px);
+   }
+   &:nth-child(3) {
+    margin-left: 30px;
+   }
+   &:nth-child(4) {
+    margin-left: 50px;
+   }
+   &:first-child,
+   &:nth-child(3) {
+    position: relative;
+    &::before,
+    &::after {
+     @include pseudo;
+     position: absolute;
+     width: 245px;
+     height: 45px;
+   }
+ }
+ &:first-child {
+   &::before {
+    @include background(url("../../images/line-1.svg"));
+    width: 245px;
+    height: 45px;
+    top: 38px;
+    right: -45px;
+   }
+ }
+ &:nth-child(3) {
+  &::before {
+   @include background(url("../../images/line-2.svg"));
+   width: 463px;
+   height: 63px;
+   top: -60px;
+   right: -30px;
+  }
+  &::after {
+   @include background(url("../../images/line-3.svg"));
+   width: 254px;
+   height: 39px;
+   top: 60px;
+   right: -60px;
+  }
+ }
+ }
+ &__num {
+  @include text(36px, 1.1);
+  @extend %ubuntu-bold;
+  margin-right: 7px;
+ }
+ &__image-box {
+  position: relative;
+  margin-right: 30px;
+   &::before {
+    @include pseudo;
+    border: 2px solid $primaryColor;
+    top: -7px;
+    right: -5px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+   }
+ }
+ &__info {
+  max-width: 300px;
+  width: 100%;
+ }
+ &__info-title {
+  @include text(21px, 1.1);
+  @extend %ubuntu-bold;
+  max-width: 123px;
+  margin-bottom: 10px;
+ }
+ &__info-text {
+  @include text(15px, 1.3);
+ }
+}

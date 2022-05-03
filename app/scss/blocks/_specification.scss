@@ -1,0 +1,70 @@
+.specification {
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 56px;
+ }
+ &__item {
+  &--center {
+   margin-left: -15px;
+   margin-right: -15px;
+  }
+ }
+ &__box {
+  width: 280px;
+  position: relative;
+  margin-top: 10px;
+   &::before {
+    @include pseudo;
+    position: absolute;
+   }
+ }
+ &__box-2 {
+  margin-top: 140px;
+ } 
+ &__box-4 {
+  margin-top: 160px;
+ }
+ &__box-1::before {
+  @include background(url("../../images/icons/pointer-1.svg"));
+  background-size: contain;
+  width: 229px;
+  height: 106px;
+  right: -185px;
+  top: 15px;
+ }
+ &__box-2::before {
+  @include background(url("../../images/icons/pointer-2.svg"));
+  background-size: contain;
+  width: 345px;
+  height: 75px;
+  right: -314px;
+  top: -60px;
+ }
+ &__box-3::before {
+  @include background(url("../../images/icons/pointer-3.svg"));
+  background-size: contain;
+  width: 249px;
+  height: 95px;
+  left: -265px;
+  top: 15px;
+ } 
+ &__box-4::before {
+  @include background(url("../../images/icons/pointer-4.svg"));
+  background-size: contain;
+  width: 115px;
+  height: 82px;
+  left: -127px;
+  top: -66px;
+ }
+ &__box-title {
+  @include text(21px, 1.3);
+  @extend %ubuntu-bold;
+  margin-bottom: 10px;
+ }
+ &__box-text {
+  @include text(15px, 1.3);
+  @extend %ubuntu-light;
+ }
+}

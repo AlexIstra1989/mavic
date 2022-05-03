@@ -1,6 +1,5 @@
 .top {
  @include background(url("../images/top-bg.jpg"));
-
   &::before {
    @include pseudo;
    top: 0;
@@ -39,7 +38,7 @@
     margin-right: 50px;
    }
   }
-  &__social-link {
+  &__social-logo {
    opacity: 0.5;
    transition: all 0.5s;
     &:hover {

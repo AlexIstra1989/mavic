@@ -1,0 +1,40 @@
+.product {
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+ }
+ &__text {
+  max-width: 440px;
+   p {
+    margin-bottom: 30px;
+   }
+ }
+ &__slider-box {
+  position: relative;
+  padding-top: 100px;
+ }
+ &__slider-text {
+  @include text(24px, 1.1);
+  @extend %ubuntu-medium;
+  width: 285px;
+  text-align: right;
+  position: absolute;
+  bottom: 20px;
+  left: -200px;
+  z-index: 5;
+ }
+ &__slider {
+  max-width: 560px;
+  
+   &::before {
+    @include pseudo;
+    border: 4px solid $primaryColor;
+    width: 560px;
+    height: 276px;
+    position: absolute;
+    top: -15px;
+    right: -17px;
+   }
+ }
+}

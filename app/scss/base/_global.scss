@@ -38,6 +38,7 @@ body {
  @include text(44px, 1.2);
  @extend %sf-regular;
  padding-left: 25px;
+ padding-top: 45px;
  margin-bottom: 55px;
 }
 
@@ -52,4 +53,30 @@ body {
 
 .scroll__btn-img {
  margin: 0 auto;
+}
+
+.slider-btn {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: $primaryColor;
+ z-index: 5;
+ width: 60px;
+ height: 48px;
+ position: absolute;
+ bottom: -49px;
+ right: 0;
+ cursor: pointer;
+  svg {
+   stroke: #000;
+  }
+  &__left {
+   right: 65px;
+  }
+  &.slick-disabled {
+   background-color: #000;
+    svg {
+     stroke: #FFF;
+    }
+  }
 }

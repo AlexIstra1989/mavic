@@ -12,6 +12,10 @@
    align-items: center;
    min-height: 30px;
   }
+  &__info {
+   display: flex;
+   align-items: center;
+  }
   &__btn {
    color: $primaryColor;
    border: 1px solid $primaryColor;

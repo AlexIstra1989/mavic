@@ -1,4 +1,7 @@
 .menu {
+ &__btn {
+  display: none;
+ }
  &__list {
   display: flex;
  }
@@ -7,6 +10,11 @@
   &:not(:last-child) {
    padding-right: 20px;
   }
+  &.active a {
+   text-decoration: underline;
+  }
  }
-
+ &__item-phone {
+  display: none;
+ }
 }
